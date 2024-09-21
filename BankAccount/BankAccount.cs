@@ -10,11 +10,15 @@ namespace BankAccount
     public class BankAccount
     {
         //Lägg till Egenskaper (fields)
-        private string AccountNumber { get; set; } // känslig info så den ska vara privat
+        public string AccountNumber { get; set; } 
         public string AccountHolder { get; set; }
-        private double Balance { get; set; } // känslig info så den ska vara privat
+        private double Balance { get; set; }
 
         //Lägg till Konstruktor
+        public BankAccount() 
+        {
+            
+        }
         public BankAccount(string accountnumber, String accountholder, double balance) 
         {
             AccountNumber = accountnumber;
@@ -43,6 +47,8 @@ namespace BankAccount
         {
             Console.WriteLine($"Balance: {Balance}"); 
         }
+
+        
 
 
 
