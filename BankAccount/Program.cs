@@ -7,9 +7,28 @@ namespace BankAccount
     {
         static void Main(string[] args)
         {
+            //up1();
+            //up2();
+            
+        }
+        static void up1() // Employee
+        {
+            Employee employee = new Employee("Jetlir");
+            employee.Age = 24;
+            employee.Salary = 3000;
+
+            Console.WriteLine($"Annual Salary: {employee.GetAnnualSalary()}");
+
+            employee.GiveRaise(10);
+            Console.WriteLine($"New Monthly Salary: {employee.Salary}");
+            Console.WriteLine($"New Annual Salary: {employee.GetAnnualSalary()}");
+            employee.DisplayEmployeeinfo();
+        }
+        static void up2()
+        {
             //Instansiera bankAccount klassen och testa den
             string option;
-            
+
             BankAccount account1 = new BankAccount("123456789", "Jetlir Kuci", 1000);
             BankAccount account2 = new BankAccount("987654321", "Brown Boy", 2000);
             BankAccount current = new BankAccount();
@@ -31,7 +50,7 @@ namespace BankAccount
                 {
                     Console.WriteLine("That number isnt valid, Try again!");
                 }
-                
+
                 if (option == current.AccountNumber)
                 {
 
@@ -70,13 +89,12 @@ namespace BankAccount
                         {
                             Console.WriteLine("That option doesn't exist, try again!");
                         }
-                        
+
                     } while (option != "4");
                 }
             } while (option != "1");
-            
-        }
-        
+        }// Bankkonto
+
     }
 }
 
